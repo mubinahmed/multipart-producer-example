@@ -34,12 +34,4 @@ public class TestMultipart {
         formData.add("file-data_5", fileSystemResource);
         return ResponseEntity.ok().body(formData);
     }
-
-
-    @PutMapping
-    public void get() {
-        RestTemplate restTemplate = new RestTemplate();
-        MultiValueMap<String, Object> formData = restTemplate.getForObject("http://localhost:8080/test", MultiValueMap.class);
-        System.out.println("test");
-    }
 }
